@@ -1,10 +1,14 @@
 language: node_js
 node_js: 0.10
 env:
-  secure: kbKABjRNk81DYWTHXVaMut4yXIHFsmdCAqjtpzBUyY9h0SrqjrcQ8fdqeD+rdCTjNl3ojCy2g6+IMcfah+Fx1VzQ9JsZIJemVTe6UvjyVdDGNRHE62uMa7BVLgvVP6oN+JGGMbqWW+kLW8XpZXO8HlR+WgLirZrX3oEaVHbbBEDx2hcJ7S07kWT3L/kocz+fbnLkHz6F+i4oHPTyMthR46I/aUr9vk9HFUHgrVEUXL/Ywx2fr3p4euU/tldxYrHpwHd8/16oek+WziHKL2/c0JxkpOxnz+Ztbbq4ZVieb95TgAidEmdS0Wr5096sNoPRliKplOuLNH50dvraOz3Psw== 
+  global:
+    - FOO=bar
+  matrix:
+    - secure: kbKABjRNk81DYWTHXVaMut4yXIHFsmdCAqjtpzBUyY9h0SrqjrcQ8fdqeD+rdCTjNl3ojCy2g6+IMcfah+Fx1VzQ9JsZIJemVTe6UvjyVdDGNRHE62uMa7BVLgvVP6oN+JGGMbqWW+kLW8XpZXO8HlR+WgLirZrX3oEaVHbbBEDx2hcJ7S07kWT3L/kocz+fbnLkHz6F+i4oHPTyMthR46I/aUr9vk9HFUHgrVEUXL/Ywx2fr3p4euU/tldxYrHpwHd8/16oek+WziHKL2/c0JxkpOxnz+Ztbbq4ZVieb95TgAidEmdS0Wr5096sNoPRliKplOuLNH50dvraOz3Psw== 
 install: true
 script:
   - echo The magic words are $MAGIC_WORDS
+  - echo $FOO
 branches:
   only:
     - master
