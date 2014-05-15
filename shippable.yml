@@ -5,3 +5,6 @@ env:
 install: true
 script:
   - echo The magic words are $MAGIC_WORDS
+branches:
+  only:
+    - master
